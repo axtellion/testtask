@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { fetchUsers } from '../../services/api';
 import { Title } from './Users.styled';
 
-export const Users = () => {
+export const Users = ({ state }) => {
   const [user, setUser] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -34,6 +34,7 @@ export const Users = () => {
       <Box display="flex" justifyContent="center">
         <Button text={'Show more'} onClick={loadMore} />
       </Box>
+      <img src={`${state}`} alt="img-form" />
     </Box>
   );
 };

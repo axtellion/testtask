@@ -8,7 +8,7 @@ export async function fetchUsers(page) {
 }
 
 export async function postUsers(users) {
-  console.log(users);
+  console.log(users.photo);
   await axios
     .post(`${API_URL}v1/users`, {
       name: users.name,

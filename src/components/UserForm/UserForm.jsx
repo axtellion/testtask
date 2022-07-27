@@ -13,15 +13,17 @@ const schema = yup.object().shape({
     .string()
     .matches(phoneRegExp, 'Phone number is not valid')
     .required(),
+  photo: yup.string().nullable(),
 });
 
-const values = { name: '', email: '', phone: '' };
+const values = { name: '', email: '', phone: '', photo: '' };
 
-export const UserForm = () => {
+export const UserForm = ({ onChande }) => {
   const handleSubmit = (values, { resetForm }) => {
     const contactValue = values;
     // console.log(values);
     postUsers(contactValue);
+    onChande(contactValue.photo);
     resetForm();
   };
 
@@ -47,6 +49,11 @@ export const UserForm = () => {
           <label>
             <p>Phone</p>
             <Field name="phone" type="text" />
+            <ErrorMessage name="name" component={ErrorForm} />
+          </label>
+          <label>
+            <p>Photo</p>
+            <Field name="photo" type="file" />
             <ErrorMessage name="name" component={ErrorForm} />
           </label>
           <button type="submit">Sign Up</button>
