@@ -45,7 +45,7 @@ export const UserForm = () => {
             <ErrorMessage name="name" component={ErrorForm} />
           </label>
           <label>
-            <p>Email</p>
+            <p>Phone</p>
             <Field name="phone" type="text" />
             <ErrorMessage name="name" component={ErrorForm} />
           </label>
