@@ -19,7 +19,7 @@ export const Item = styled.li`
   @media screen and (min-width: 1024px) {
     width: 282px;
   }
-  @media screen and (min-width: 1560px) {
+  @media screen and (min-width: 2560px) {
     width: 370px;
   }
 `;
