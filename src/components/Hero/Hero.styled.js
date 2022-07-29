@@ -39,7 +39,7 @@ export const HeroBox = styled.div`
     padding-left: 322px;
     padding-right: 322px;
   }
-  @media screen and (min-width: 1560px) {
+  @media screen and (min-width: 2560px) {
     padding-left: 395px;
     padding-right: 395px;
   }
