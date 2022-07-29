@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { fetchUsers } from '../../services/api';
 import { Title } from './Users.styled';
 
-export const Users = ({ state }) => {
+export const Users = () => {
   const [user, setUser] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -28,7 +28,7 @@ export const Users = ({ state }) => {
   };
 
   return (
-    <Box bg="#D0CFCF" pt="140px">
+    <Box bg="#E5E5E5" pt="140px">
       <Title>Working with GET request</Title>
       <UserCart users={user} />
       <Box display="flex" justifyContent="center">
