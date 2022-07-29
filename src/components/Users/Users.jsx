@@ -34,7 +34,6 @@ export const Users = ({ state }) => {
       <Box display="flex" justifyContent="center">
         <Button text={'Show more'} onClick={loadMore} />
       </Box>
-      <img src={`${state}`} alt="img-form" />
     </Box>
   );
 };
